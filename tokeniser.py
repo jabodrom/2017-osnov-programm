@@ -31,5 +31,5 @@ for line in text:
 	for token in tokens:
 		if token == '':
 			continue
-		print(token_id, '\t', token, ' \t_\t_\t_\t_\t_\t_\t_\t_')
+		print(token_id, '\t', token, '\t_\t_\t_\t_\t_\t_\t_\t_')
 		token_id = token_id + 1
