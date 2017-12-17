@@ -8,6 +8,7 @@ for line in text:
 	line = line.strip()
 	if line == '':
 		continue
+	line = line.replace('\t',  ' ')
 	print('# sent_id = ', sent_id)
 	print('# text = ', line)
 	line = line.replace(':',  ' :')
