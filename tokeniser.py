@@ -18,12 +18,8 @@ for line in text:
 	line = line.replace('?',  ' ?')
 	line = line.replace('!',  ' !')
 	line = line.replace(';',  ' ;')
-	line = line.replace(' \'',  ' \' ')
-	line = line.replace('\' ',  ' \' ')
 	line = line.replace(' \"',  ' \" ')
 	line = line.replace('\" ',  ' \" ')
-	line = line.replace('с . ш . ',  'с.ш. ')
-	line = line.replace('з . д . ',  'з.д. ')
 	sent_id = sent_id + 1
 	
 	token_id = 1
