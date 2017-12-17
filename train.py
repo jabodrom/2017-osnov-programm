@@ -8,7 +8,7 @@ words = {}
 for line in f.readlines():
     if not line.startswith('#'):
         spl = line.strip().split('\t')
-        word = spl[1].strip()
+        word = spl[1].strip().lower()
         tag = spl[3].strip()
         if tag in tags:
             tags[tag] += 1
