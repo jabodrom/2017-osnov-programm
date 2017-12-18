@@ -12,6 +12,12 @@ for x in f.readlines():
 f.close()
 starts = sorted(starts,key=lambda x: len(x),reverse=True)
 
+f = open('circumfixes.txt','r',encoding='utf-8')
+circ = []
+for x in f.readlines():
+    circ.append(x.strip().split('\t'))
+f.close()
+
 f = open('stems.txt','r',encoding='utf-8-sig')
 stems = set()
 for line in f.readlines():
@@ -19,6 +25,10 @@ for line in f.readlines():
 f.close()
 
 def find_stem(word):
+    for c in circ:
+        if word.startswith(c[0]) and word.endswith(c[1]):
+            word = word[len(c[0]):-len(c[1])]
+            break
     cut = True
     while cut:
         cut = False
