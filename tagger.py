@@ -23,7 +23,7 @@ for line in m.readlines():
 f = open('ckt_tagged.txt','w',encoding='utf-8')
 for line in text:
     if line.startswith('#'):
-        f.write(line+'\n')
+        f.write(line)
     else:
         spl = line.strip().split()
         if spl:
